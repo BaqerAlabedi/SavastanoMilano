@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.options('*', cors({
-  origin: 'https://savastano-milano-nb4r-git-main-bagers-projects.vercel.app',
+  origin: 'https://savastano-milano-nb4r.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
