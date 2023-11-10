@@ -16,12 +16,18 @@ app.use(bodyParser.json());
 
 app.use(express.json());
 
-app.use(cors(
-  { origin: "*",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-  }
-  ));
+app.use(cors({
+  origin: 'https://savastano-milano-nb4r.vercel.app',
+  methods: ["POST", "GET", "PUT", "DELETE"],
+  credentials: true
+}));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://savastano-milano-nb4r.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE');
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 app.use(require("./routes/auth"));
 
