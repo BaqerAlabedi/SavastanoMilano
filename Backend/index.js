@@ -1,3 +1,4 @@
+const cors = require("cors")
 const express = require("express");
 const app = express();
 const PORT = 5000;
@@ -27,6 +28,14 @@ mongoose.connection.on("connected", () => {
 mongoose.connection.on("error", (err) => {
   console.log("MongoDB connection error:", err);
 });
+
+app.use(cors(
+  { origin: "*",
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+  }
+  ));
+  
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
