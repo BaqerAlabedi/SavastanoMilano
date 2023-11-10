@@ -2,7 +2,15 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
+const cors = require('cors'); // Import the CORS module
 
+// Add CORS middleware
+router.use(cors({
+  origin: 'https://savastano-milano-nb4r.vercel.app', // Adjust this origin to your requirements
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 router.get('/register', (req, res) => {
   res.send('Sign up page');
