@@ -1,0 +1,6 @@
+module.exports = {
+    MONGOURL: 'mongodb+srv://bageralabedi124:YEzD74Q4r2yJ9Zuu@sava.vr9lmxa.mongodb.net/',
+  };
+
+
+
