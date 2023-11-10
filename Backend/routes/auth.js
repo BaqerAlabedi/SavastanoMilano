@@ -2,20 +2,11 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
-const cors = require("cors")
-const app = express();
 
 
 router.get('/register', (req, res) => {
   res.send('Sign up page');
 });
-
-app.use(cors(
-  { origin: "*",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-  }
-  ));
 
 router.post('/register', (req, res) => {
   var { email, password } = req.body;
