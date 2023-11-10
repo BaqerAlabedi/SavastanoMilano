@@ -3,8 +3,8 @@ import { Footer } from "./footer";
 import { Oneobject } from "./oneObject";
 import { Link } from "react-router-dom";
 import Bilder from "../Bilder/tshirt.jpg";
-import h1 from "../Bilder/h1.jpg";
-import h2 from "../Bilder/h2.jpg";
+import h1 from "../Bilder/H1.jpg";
+import h2 from "../Bilder/H2.jpg";
 
 import image5 from "../Bilder/image_10.jpeg";
 
