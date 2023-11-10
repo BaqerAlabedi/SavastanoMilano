@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use(cors(
-  { origin: "*",
+  { origin: "https://savastano-milano-nb4r.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
   }
