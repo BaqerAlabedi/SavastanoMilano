@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const { product } = require("../Backend/models/cartSchema");
 const User = require('../Backend/models/user'); // Adjust the names to match the exported models
 
-const cors = require("cors");
+
 
 app.use(bodyParser.json());
 
