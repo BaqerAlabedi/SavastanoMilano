@@ -15,7 +15,14 @@ const cors = require("cors");
 app.use(bodyParser.json());
 
 app.use(express.json());
-app.use(cors()); 
+
+app.use(cors(
+  { origin: "*",
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+  }
+  ));
+
 app.use(require("./routes/auth"));
 
 mongoose.connect(MONGOURL, {
@@ -29,13 +36,8 @@ mongoose.connection.on("error", (err) => {
   console.log("MongoDB connection error:", err);
 });
 
-app.use(cors(
-  { origin: "*",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-  }
-  ));
-  
+
+
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
