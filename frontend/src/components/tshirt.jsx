@@ -2,10 +2,10 @@ import { Navbar } from "./navbar";
 import { Footer } from "./footer";
 import { Oneobject } from "./oneObject";
 import { Link } from "react-router-dom";
-import image1 from "../Bilder/image.jpeg";
-import image2 from "../Bilder/image_1.jpeg";
-import image3 from "../Bilder/image_3.jpeg";
-import image4 from "../Bilder/image_4.jpeg";
+import image1 from "../Bilder/Image.jpeg";
+import image2 from "../Bilder/Image_1.jpeg";
+import image3 from "../Bilder/Image_3.jpeg";
+import image4 from "../Bilder/Image_4.jpeg";
 
 function Tshirt() {
   return (

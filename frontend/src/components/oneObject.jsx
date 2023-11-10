@@ -1,6 +1,6 @@
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
-import image1 from "../Bilder/image.jpeg";
+import image1 from "../Bilder/Image.jpeg";
 import login from "../Bilder/login.jpg";
 // import { useBasket } from './basketContext';
 
@@ -8,7 +8,7 @@ const Oneobject = () => {
   const addToBasket = async () => {
     try {
       const userId = localStorage.getItem("userID");
-      const response = await fetch(`http://localhost:5000/putincart/${userId}/1`, {
+      const response = await fetch(`https://savastano-milano.vercel.app/putincart/${userId}/1`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

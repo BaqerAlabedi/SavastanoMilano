@@ -10,7 +10,7 @@ function Basket() {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch('http://localhost:5000/getusercart/654cc8bf07198231b1b277a9');
+        const response = await fetch('https://savastano-milano.vercel.app/getusercart/654cc8bf07198231b1b277a9');
         if (response.ok) {
           const cartData = await response.json();
           setCartItems(cartData);

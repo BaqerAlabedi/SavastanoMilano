@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await Axios.post("http://localhost:5000/register", {
+      await Axios.post("https://savastano-milano.vercel.app/register", {
         email: email,
         password: password,
       });
