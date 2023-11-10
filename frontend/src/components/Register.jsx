@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await Axios.post("https://savastano-milano.vercel.app/register", {
+      await Axios.post("https://savastano-milano-gtrr.vercel.app/register", {
         email: email,
         password: password,
       });

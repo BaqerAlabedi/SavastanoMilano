@@ -8,7 +8,7 @@ const Oneobject = () => {
   const addToBasket = async () => {
     try {
       const userId = localStorage.getItem("userID");
-      const response = await fetch(`https://savastano-milano.vercel.app/putincart/${userId}/1`, {
+      const response = await fetch(`https://savastano-milano-gtrr.vercel.app/putincart/${userId}/1`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
